@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B77BB022B2DD83C005CF075 /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B77BB012B2DD83C005CF075 /* LoopKit.framework */; };
+		3B77BB062B2DD840005CF075 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B77BB052B2DD840005CF075 /* LoopKitUI.framework */; };
 		C109F14A291ECCE2008EA5B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C109F149291ECCE2008EA5B6 /* Assets.xcassets */; };
 		C109F14C291ED66F008EA5B6 /* G7GlucoseMessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C109F14B291ED66F008EA5B6 /* G7GlucoseMessageTests.swift */; };
 		C139829829295D7D0047DB5F /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17F514A291EB6F000555EB5 /* HKUnit.swift */; };
@@ -106,6 +108,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B77BB012B2DD83C005CF075 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B77BB052B2DD840005CF075 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1086B0E29C9169100D46E65 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1086B0F29C9169100D46E65 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C109F149291ECCE2008EA5B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B77BB022B2DD83C005CF075 /* LoopKit.framework in Frameworks */,
+				3B77BB062B2DD840005CF075 /* LoopKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +342,8 @@
 		C17F5128291EAFA100555EB5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B77BB052B2DD840005CF075 /* LoopKitUI.framework */,
+				3B77BB012B2DD83C005CF075 /* LoopKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
