@@ -30,6 +30,13 @@ extension OSLog {
     }
 
     private func log(_ message: StaticString, type: OSLogType, _ args: [CVarArg]) {
+        if let debugLogger = G7CGMManager.debugLogger {
+            withVaList(args) { vaList in
+                let formatString = message.description.replacingOccurrences(of: "{public}", with: "")
+                let logMessage = NSString(format: formatString, arguments: vaList)
+                debugLogger.log(category: "G7SensorKit", type: "\(type)", message: logMessage as String)
+            }
+        }
         switch args.count {
         case 0:
             os_log(message, log: self, type: type)

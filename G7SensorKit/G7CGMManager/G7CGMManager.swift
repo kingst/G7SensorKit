@@ -11,7 +11,9 @@ import LoopKit
 import os.log
 import HealthKit
 
-
+public protocol G7DebugLogger: AnyObject {
+    func log(category: String, type: String, message: String)
+}
 
 public protocol G7StateObserver: AnyObject {
     func g7StateDidUpdate(_ state: G7CGMManagerState?)
@@ -20,7 +22,8 @@ public protocol G7StateObserver: AnyObject {
 
 public class G7CGMManager: CGMManager {
     private let log = OSLog(category: "G7CGMManager")
-
+    public static weak var debugLogger: G7DebugLogger?
+    
     public var state: G7CGMManagerState {
         return lockedState.value
     }
@@ -261,6 +264,7 @@ public class G7CGMManager: CGMManager {
     }
 
     func logDeviceCommunication(_ message: String, type: DeviceLogEntryType = .send) {
+        G7CGMManager.debugLogger?.log(category: "G7SensorKit", type: "info", message: message)
         self.cgmManagerDelegate?.deviceManager(self, logEventForDeviceIdentifier: state.sensorID, type: type, message: message, completion: nil)
     }
 
